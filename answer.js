@@ -34,3 +34,17 @@ const names = ["rahim", "robin", "rafi", "roni", "rashed", "abdulbarik", "raj"];
  const smlName = smallName(names);
  console.log("small name is", smlName);
 
+//  Your task is to calculate the total budget required to buy electronics:
+
+const laptopPrice = 35000;
+const tabletPrice = 15000;
+const mobilePrice = 20000;
+
+const laptopQty = 3;
+const tabletQty = 5;
+const mobileQty = 9;
+
+const totalBudget =
+  laptopPrice * laptopQty + tabletPrice * tabletQty + mobilePrice * mobileQty;
+
+console.log("Total budget required =", totalBudget, "tk");
