@@ -33,3 +33,48 @@ const names = ["rahim", "robin", "rafi", "roni", "rashed", "abdulbarik", "raj"];
  }
  const smlName = smallName(names);
  console.log("small name is", smlName);
+
+  // TASK NUMBER 3
+//  Your task is to calculate the total budget required to buy electronics:
+const prodacts = [
+{ name: "laptop", Price: 35000, quantity: 2},
+{ name: "tablet", Price: 15000, quantity: 5},
+{ name: "mobile", Price: 20000, quantity: 3},
+]
+function cardTotal(prodacts){
+  let sum = 0;
+  for ( const prodact of prodacts){
+    const thisProdactCost = prodact.Price * prodact.quantity;
+    sum =  sum + thisProdactCost;
+  }
+  return sum;
+}
+const shippingCast = cardTotal(prodacts);
+console.log("Pockat thaka jabea aj", shippingCast);
+
+
+
+ //TASK MUNMER 4
+ /* 
+ You are `given an array of phone objects`, each containing information about the `model, brand, and price`. Your task is to write a JavaScript function named `findAveragePhonePrice` that takes this `array as input` and returns the `average price of phone`.
+  */ 
+
+ const phones = [
+   { model: "PhoneA", brand: "Iphone", price: 95000 },
+   { model: "PhoneB", brand: "Samsung", price: 40000 },
+   { model: "PhoneC", brand: "Oppo", price: 26000 },
+   { model: "PhoneD", brand: "Nokia", price: 35000 },
+   { model: "PhoneE", brand: "Iphone", price: 105000 },
+   { model: "PhoneF", brand: "HTC", price: 48000 },
+ ];
+
+ function findAveragePhonePrice(phones){
+    let sum =0;
+    for ( const phone of phones){
+        sum = sum + phone.price
+    }
+    console.log(phones.length);
+    return sum / phones.length;
+ }
+ const average = findAveragePhonePrice(phones)
+console.log("average phone price is" , average.toFixed(2), "TK")
