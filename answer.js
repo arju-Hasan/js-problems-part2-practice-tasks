@@ -34,17 +34,21 @@ const names = ["rahim", "robin", "rafi", "roni", "rashed", "abdulbarik", "raj"];
  const smlName = smallName(names);
  console.log("small name is", smlName);
 
+ // TASK NUMBER 3
 //  Your task is to calculate the total budget required to buy electronics:
+const prodacts = [
+{ name: "laptop", Price: 35000, quantity: 2},
+{ name: "tablet", Price: 15000, quantity: 5},
+{ name: "mobile", Price: 20000, quantity: 3},
+]
+function cardTotal(prodacts){
+  let sum = 0;
+  for ( const prodact of prodacts){
+    const thisProdactCost = prodact.Price * prodact.quantity;
+    sum =  sum + thisProdactCost;
+  }
+  return sum;
+}
+const shippingCast = cardTotal(prodacts);
+console.log("Pockat thaka jabea aj", shippingCast);
 
-const laptopPrice = 35000;
-const tabletPrice = 15000;
-const mobilePrice = 20000;
-
-const laptopQty = 3;
-const tabletQty = 5;
-const mobileQty = 9;
-
-const totalBudget =
-  laptopPrice * laptopQty + tabletPrice * tabletQty + mobilePrice * mobileQty;
-
-console.log("Total budget required =", totalBudget, "tk");
